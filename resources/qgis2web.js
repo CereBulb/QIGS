@@ -4,12 +4,12 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [13116715.146287, -2525944.818762, 13117968.083897, -2525077.944573], maxZoom: 28, minZoom: 1
+        extent: [13116275.109978, -2526589.716885, 13118020.586924, -2525359.649736], maxZoom: 28, minZoom: 1
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([13116715.146287, -2525944.818762, 13117968.083897, -2525077.944573], map.getSize());
+map.getView().fit([13116275.109978, -2526589.716885, 13118020.586924, -2525359.649736], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -434,7 +434,7 @@ var Title = new ol.control.Control({
     element: (() => {
         var titleElement = document.createElement('div');
         titleElement.className = 'top-left-title ol-control';
-        titleElement.innerHTML = '<h2 class="project-title">Fuel Consumption as per Truck Localtion</h2>';
+        titleElement.innerHTML = '<h2 class="project-title">Fuel Consumption as per Truck Local</h2>';
         return titleElement;
     })(),
     target: 'top-left-container'
